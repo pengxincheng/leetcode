@@ -1,5 +1,7 @@
 package com.pxc.leetcode.day20190307;
 
+import java.util.Arrays;
+
 /**
  * @author pengxincheng@ipaynow.cn
  * @Date: 2019/3/12
@@ -39,8 +41,44 @@ public class ListNode {
         }
 
 
+        public int[] mergeTwoArray(int[] a, int[] b) {
+            if (a == null || a.length == 0) {
+                return b;
+            }
+            if (b == null || b.length == 0) {
+                return a;
+            }
+
+            int[] result = new int[a.length + b.length];
+            int minLength = Math.min(a.length, b.length);
+
+            int i = 0;
+            int j = 0;
+            int k = 0;
+
+            while (i < a.length && j < b.length) {
+                if (a[i] < b[j]) {
+                    result[k++] = a[i++];      //先取值 再加1
+                } else {
+                    result[k++] = b[j++];
+                }
+            }
+
+            while (i < a.length) {
+                result[k++] = a[i++];
+            }
+
+            while (j < b.length) {
+                result[k++] = b[j++];
+            }
+
+            return result;
+
+        }
+
+
         public static void main(String[] args) {
-            ListNode n1 = new ListNode(1);
+            /*ListNode n1 = new ListNode(1);
             ListNode n2 = new ListNode(2);
             ListNode n3 = new ListNode(4);
 
@@ -55,7 +93,13 @@ public class ListNode {
             m2.next = m3;
 
             ListNode res = new Solution().mergeTwoLists(n1, m1);
-            System.out.println(res);
+            System.out.println(res);*/
+
+
+            int a[] = {1,3,5,7,10};
+            int b[] = {2,4,6,8};
+            int[] c = new Solution().mergeTwoArray(a,b);
+            Arrays.stream(c).forEach(System.out::println);
         }
     }
 
