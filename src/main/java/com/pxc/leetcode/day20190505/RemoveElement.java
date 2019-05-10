@@ -16,7 +16,7 @@ public class RemoveElement {
 
         int j = 0;
         for (int i = 0; i < nums.length; i++) {
-            if (nums[i] != val) {
+            if (nums[i] != val) {                      //变换思维 找不需要删除的元素
                 nums[j] = nums[i];
                 j += 1;
             }
