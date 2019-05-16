@@ -1,4 +1,4 @@
-package com.pxc.leetcode.day20190215;
+package com.pxc.leetcode.easy.day20190215;
 
 /**
  * @author pengxincheng@ipaynow.cn

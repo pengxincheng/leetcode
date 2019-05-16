@@ -1,4 +1,4 @@
-package com.pxc.leetcode.day20190307;
+package com.pxc.leetcode.easy.day20190307;
 
 import java.util.HashMap;
 import java.util.Stack;
