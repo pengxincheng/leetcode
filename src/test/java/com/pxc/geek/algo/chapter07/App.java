@@ -1,9 +1,6 @@
 package com.pxc.geek.algo.chapter07;
 
-import com.pxc.leetcode.easy.day20190307.ListNode;
 import org.junit.Test;
-
-import java.util.Objects;
 
 /**
  * 数据结构算法
